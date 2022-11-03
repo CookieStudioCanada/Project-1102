@@ -4,29 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project 1102</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
-    <h2>55 (2)</h2>
-    <p class="instructions">Instructions</p>
-    <input id="PD-552" type="number" placeholder="PD">
+    <h2>55 (2) L.I.R.</h2>
+    JVM des actions rachetées : <input id="PD-552" type="number" placeholder="PD">
     <br><br>
-    <input id="PBR-552" type="number" placeholder="PBR">
+    PBR : <input id="PBR-552" type="number" placeholder="PBR">
     <br><br>
-    <input id="CV" type="number" placeholder="CV">
+    CV : <input id="CV" type="number" placeholder="CV">
     <br><br>
-    <input id="SAFE" type="number" placeholder="Safe Income">
+    Revenu protégé : <input id="SAFE" type="number" placeholder="RP">
     <br><br>
     <button onclick="Button552()" id="btn1">Calcul</button>
-    <br>
-    <p class="result" id="div-rep-el">Dividende réputé : </p>
-    <p class="result" id="div-nonrep-el">Dividende réputé ne pas être un dividende : </p>
-    <p class="result" id="pd-ajust-el">PD ajusté : </p>
-    <p class="result" id="impot-552-el">Impôts : </p>
-    <p class="result" id="cdc-el">CDC : </p>
-    <p class="result" id="imrtd-el">IMRTD : </p>
-    <br>
+    <br><br>
+
+    <table>
+        <tr>
+            <th>Description</th>
+            <th>Montant</th> 
+        </tr>
+        <tr>
+            <td>Dividende réputé :</td>
+            <td id="div-rep-el"></td> 
+        </tr>
+        <tr>
+            <td>Dividende réputé ne pas être un dividende :</td>
+            <td id="div-nonrep-el"></td> 
+        </tr>
+        <tr>
+            <td>PD ajusté :</td>
+            <td id="pd-ajust-el"></td> 
+        </tr>
+        <tr>
+            <td>Impôts : </td>
+            <td id="impot-552-el"></td> 
+        </tr>
+        <tr>
+            <td>CDC :</td>
+            <td id="cdc-el"></td> 
+        </tr>
+        <tr>
+            <td>IMRTD :</td>
+            <td id="imrtd-el"></td> 
+        </tr>
+      </table>
 
 <script src="index.js"></script>
 

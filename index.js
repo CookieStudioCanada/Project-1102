@@ -11,9 +11,6 @@ let imrtdEl = document.getElementById("imrtd-el")
 
 function Button552()
 {
-
-    console.log("ca marche tu cali...")
-
     let pd = document.getElementById("PD-552").value
     let pbr = document.getElementById("PBR-552").value
     let cv = document.getElementById("CV").value
@@ -36,11 +33,11 @@ function Button552()
     console.log("gci : " + gci)
     console.log("impot : " + impot)
 
-    divrepEl.textContent = "Dividende rep : " + divrep + " $"
-    divnonrepEl.textContent = "Dividende rep ne pas etre un div : " + divnonRP + " $"
-    pdajustEl.textContent = "PD ajusté : " + pdajust + " $"
-    impot552El.textContent = "Impôts payables : " + impot + "$"
-    cdcEl.textContent = "CDC : " + cdc + "$"
-    imrtdEl.textContent = "IMRTD : " + imrtd + "$"
+    divrepEl.textContent = divrep + " $"
+    divnonrepEl.textContent = divnonRP + " $"
+    pdajustEl.textContent = pdajust + " $"
+    impot552El.textContent = impot + " $"
+    cdcEl.textContent = cdc + " $"
+    imrtdEl.textContent = imrtd + " $"
     
 }

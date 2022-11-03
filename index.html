@@ -7,8 +7,57 @@
     <title>Project 1102</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
+<header>Project 1102.</header>
+
 <body>
+
+<!-- Tab links -->
+<div class="tab">
+    <button class="tablinks" onclick="tabs(event, 'Menu')">Menu</button>
+    <button class="tablinks" onclick="tabs(event, 'GC')">Gain en capital</button>
+    <button class="tablinks" onclick="tabs(event, '552')">55(2)</button>
+    <button class="tablinks" onclick="tabs(event, 'InteretCompose')">Intérêts composés</button>    
+    <button class="tablinks" onclick="tabs(event, 'NousJoindre')">Nous joindre</button>
+  </div>
+
+  <div id="Menu" class="tabcontent">
+    <h2>Menu</h2>
+  </div>
+
+  <div id="GC" class="tabcontent">
+    <h2>Gain en capital</h2>
+    <br>
+    JVM des actions vendus : <input id="PD" type="number" placeholder="PD">
+    <br><br>
+    PBR : <input id="PBR" type="number" placeholder="PBR">
+    <br><br>
+    <button onclick="ButtonGC()">Calcul</button>
+    <br><br>
+
+    <table>
+        <tr>
+            <th>Description</th>
+            <th>Montant</th> 
+        </tr>
+        <tr>
+            <td>Impôts : </td>
+            <td id="impot-el"></td> 
+        </tr>
+        <tr>
+            <td>CDC :</td>
+            <td id="cdc-el"></td> 
+        </tr>
+        <tr>
+            <td>IMRTD :</td>
+            <td id="imrtd-el"></td> 
+        </tr>
+      </table>
+  </div>
+
+  <div id="552" class="tabcontent">
     <h2>55 (2) L.I.R.</h2>
+    <br>
     JVM des actions rachetées : <input id="PD-552" type="number" placeholder="PD">
     <br><br>
     PBR : <input id="PBR-552" type="number" placeholder="PBR">
@@ -17,7 +66,7 @@
     <br><br>
     Revenu protégé : <input id="SAFE" type="number" placeholder="RP">
     <br><br>
-    <button onclick="Button552()" id="btn1">Calcul</button>
+    <button onclick="Button552()">Calcul</button>
     <br><br>
 
     <table>
@@ -43,13 +92,22 @@
         </tr>
         <tr>
             <td>CDC :</td>
-            <td id="cdc-el"></td> 
+            <td id="cdc-552-el"></td> 
         </tr>
         <tr>
             <td>IMRTD :</td>
-            <td id="imrtd-el"></td> 
+            <td id="imrtd-552-el"></td> 
         </tr>
       </table>
+  </div>
+
+  <div id="InteretCompose" class="tabcontent">
+    <h2>Intérêts composés</h2>
+  </div>
+
+  <div id="NousJoindre" class="tabcontent">
+    <h2>Nous joindre</h2>
+  </div>
 
 <script src="index.js"></script>
 

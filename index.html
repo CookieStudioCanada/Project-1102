@@ -8,69 +8,106 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-<header>Project 1102.</header>
-
 <body>
 
-<!-- Tab links -->
-<div class="tab">
-    <button class="tablinks" onclick="tabs(event, 'Menu')">Menu</button>
-    <button class="tablinks" onclick="tabs(event, 'GC')">Gain en capital</button>
-    <button class="tablinks" onclick="tabs(event, '552')">55(2)</button>
-    <button class="tablinks" onclick="tabs(event, 'InteretCompose')">Intérêts composés</button>    
-    <button class="tablinks" onclick="tabs(event, 'NousJoindre')">Nous joindre</button>
+  <header>
+    <h1>Project 1102</h1>
+    <button id="toggle-button" class="toggle-button">X</button> 
+  </header>
+
+  <nav>
+    <div id="dropdown" class="dropdown">
+      <div class="navlinks">
+        <a href="#Menu">Menu</a>
+        <a href="#GC">Disposition de biens</a>
+        <a href="#552">55(2) LIR</a>
+      </div>
+    </div>  
+  </nav>
+
+  <div id="Menu" class="section">
+    <h2>Bienvenue</h2>
+    <p>...</p>
   </div>
 
-  <div id="Menu" class="tabcontent">
-    <h2>Menu</h2>
-    <p>ALLO</p>
-  </div>
-
-  <div id="GC" class="tabcontent">
+  <div id="GC" class="section">
     <h2>Gain en capital</h2>
-    <br>
-    JVM des actions vendus : <input id="PD" type="number" placeholder="PD">
-    <br><br>
-    PBR : <input id="PBR" type="number" placeholder="PBR">
-    <br><br>
-    <button onclick="ButtonGC()">Calcul</button>
-    <br><br>
 
-    <table>
-        <tr>
-            <th>Description</th>
-            <th>Montant</th> 
-        </tr>
-        <tr>
-            <td>Impôts : </td>
-            <td id="impot-el"></td> 
-        </tr>
-        <tr>
-            <td>CDC :</td>
-            <td id="cdc-el"></td> 
-        </tr>
-        <tr>
-            <td>IMRTD :</td>
-            <td id="imrtd-el"></td> 
-        </tr>
-      </table>
+    <!-- Dropdown menu -->
+    <div class="subSection">
+        <p>Type de biens :</p>
+        <select id="bien-type">
+            <option value="">Choisir</option>
+            <option value="amortissable">Bien amortissable</option>
+            <option value="non-amortissable">Bien non-amortissable</option>
+        </select>
+    </div>
+    
+    <!-- #Output -->
+    <div class="subSection" id="output"></div> 
+
+    <!-- Tables -->
+    <div class="subSection">
+        <table>
+            <tr>
+                <th>Description</th>
+                <th>Montant</th> 
+            </tr>
+            <tr>
+                <td>Nom : </td>
+                <td id="nom-el"></td> 
+            </tr>
+            <tr>
+                <td>Coût/PBR : </td>
+                <td id="pbr-el"></td> 
+            </tr>
+            <tr>
+                <td>FNACC : </td>
+                <td id="fnacc-el"></td> 
+            </tr>
+            <tr>
+                <td>JVM : </td>
+                <td id="jvm-el"></td> 
+            </tr>
+            <tr>
+                <td>Impôts sur GC : </td>
+                <td id="impot-el"></td> 
+            </tr>
+            <tr>
+                <td>Impôts sur recup : </td>
+                <td id="recup-el"></td> 
+            </tr>
+            <tr>
+                <td>CDC :</td>
+                <td id="cdc-el"></td> 
+            </tr>
+            <tr>
+                <td>IMRTD :</td>
+                <td id="imrtd-el"></td> 
+            </tr>
+        </table>    
+        <p id="informations" ></p>    
+    </div>
+
   </div>
 
-  <div id="552" class="tabcontent">
+  <div id="552" class="section">
     <h2>55 (2) L.I.R.</h2>
-    <br>
-    JVM des actions rachetées : <input id="PD-552" type="number" placeholder="PD">
-    <br><br>
-    PBR : <input id="PBR-552" type="number" placeholder="PBR">
-    <br><br>
-    CV : <input id="CV" type="number" placeholder="CV">
-    <br><br>
-    Revenu protégé : <input id="SAFE" type="number" placeholder="RP">
-    <br><br>
-    <button onclick="Button552()">Calcul</button>
-    <br><br>
 
-    <table>
+    <div class="subSection">
+      JVM des actions rachetées : <input id="PD-552" type="number" placeholder="PD">
+      <br><br>
+      PBR : <input id="PBR-552" type="number" placeholder="PBR">
+      <br><br>
+      CV : <input id="CV" type="number" placeholder="CV">
+      <br><br>
+      Revenu protégé : <input id="SAFE" type="number" placeholder="RP">
+      <br><br>
+      <button onclick="Button552()">Calcul</button>
+    </div> 
+
+    <div class="subSection">
+      <table>
         <tr>
             <th>Description</th>
             <th>Montant</th> 
@@ -80,7 +117,7 @@
             <td id="div-rep-el"></td> 
         </tr>
         <tr>
-            <td>Dividende réputé ne pas être un dividende :</td>
+            <td>Montant réputé non-dividende :</td>
             <td id="div-nonrep-el"></td> 
         </tr>
         <tr>
@@ -100,14 +137,8 @@
             <td id="imrtd-552-el"></td> 
         </tr>
       </table>
-  </div>
+    </div> 
 
-  <div id="InteretCompose" class="tabcontent">
-    <h2>Intérêts composés</h2>
-  </div>
-
-  <div id="NousJoindre" class="tabcontent">
-    <h2>Nous joindre</h2>
   </div>
 
 <script src="index.js"></script>

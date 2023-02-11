@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1102</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Project 1102</h1>
+    <button id="toggle-button" class="toggle-button">X</button> 
+  </header>
+
+  <nav>
+    <div id="dropdown" class="dropdown">
+      <div class="navlinks">
+        <a href="index.html">Menu</a>
+        <a href="gc.html">Disposition de biens</a>
+        <a href="552.html">55(2) LIR</a>
+      </div>
+    </div>  
+  </nav>
+
+  <div id="GC" class="section">
+    <h2>Gain en capital</h2>
+
+    <!-- Dropdown menu -->
+    <div class="subSection">
+        <p>Type de biens :</p>
+        <select id="bien-type">
+            <option value="">Choisir</option>
+            <option value="amortissable">Bien amortissable</option>
+            <option value="non-amortissable">Bien non-amortissable</option>
+        </select>
+    </div>
+    
+    <!-- #Output -->
+    <div class="subSection" id="output"></div> 
+
+    <!-- Tables -->
+    <div class="subSection">
+        <table>
+            <tr>
+                <th>Description</th>
+                <th>Montant</th> 
+            </tr>
+            <tr>
+                <td>Nom : </td>
+                <td id="nom-el"></td> 
+            </tr>
+            <tr>
+                <td>Coût/PBR : </td>
+                <td id="pbr-el"></td> 
+            </tr>
+            <tr>
+                <td>FNACC : </td>
+                <td id="fnacc-el"></td> 
+            </tr>
+            <tr>
+                <td>JVM : </td>
+                <td id="jvm-el"></td> 
+            </tr>
+            <tr>
+                <td>Impôts sur GC : </td>
+                <td id="impot-el"></td> 
+            </tr>
+            <tr>
+                <td>Impôts sur recup : </td>
+                <td id="recup-el"></td> 
+            </tr>
+            <tr>
+                <td>CDC :</td>
+                <td id="cdc-el"></td> 
+            </tr>
+            <tr>
+                <td>IMRTD :</td>
+                <td id="imrtd-el"></td> 
+            </tr>
+        </table>    
+        <p id="informations" ></p>    
+    </div>
+
+  </div>
+
+<script src="index.js"></script>
+
+</body>
+</html>

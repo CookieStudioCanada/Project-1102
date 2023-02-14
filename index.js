@@ -47,17 +47,17 @@ select.addEventListener("change", function() {
 var optionTexts = { 
   "bien-amort": 
     "<br> Nom du bien : <input id='Nom' type='text' placeholder='Nom'><br>" +
-    "<br> Société : <input id='Societe' type='checkbox' placeholder='Societe'><br>" +
     "<br> Coût : <input id='PBR' type='number' placeholder='PBR'><br>" + 
     "<br> FNACC : <input id='FNACC' type='number' placeholder='FNACC'><br>" +     
     "<br> JVM : <input id='PD' type='number' placeholder='PD'><br>" +
+    "<br> Société : <input id='Societe' type='checkbox' placeholder='Societe'><br>" +
     "<br><button onclick='ButtonGC()'>Calcul</button>",
   "bien-non-amort": 
     "<br> Nom du bien : <input id='Nom' type='text' placeholder='Nom'><br>" +
-    "<br> Société : <input id='Societe' type='checkbox' placeholder='Societe'><br>" +
     "<br> PBR : <input id='PBR' type='number' placeholder='PBR'><br>" +     
     "<a id='FNACC' type='number' placeholder='FNACC' value='0'>" +     
     "<br> JVM : <input id='PD' type='number' placeholder='PD'><br>" +
+    "<br> Société : <input id='Societe' type='checkbox' placeholder='Societe'><br>" +
     "<br><button onclick='ButtonGC()'>Calcul</button>",
 };
 
@@ -141,9 +141,9 @@ function ButtonGC()
       cdcEl.textContent = cdc + " $"
       imrtdEl.textContent = imrtd.toFixed(2) + " $"
       nomEl.textContent = nom;
-      pbrEl.textContent = pbr.toString();
-      jvmEl.textContent = pd.toString();
-      fnaccEl.textContent = fnacc;
+      pbrEl.textContent = pbr.toString() + " $";
+      jvmEl.textContent = pd.toString() + " $";
+      fnaccEl.textContent = fnacc + " $";
       recupEl.textContent = (recup * 0.122).toFixed(2) + " $ (DPE)";  
       informations.innerHTML = "La société a disposé d'un bien amortissable..."
 
@@ -153,9 +153,9 @@ function ButtonGC()
       cdcEl.textContent = "N/A"
       imrtdEl.textContent = "N/A"
       nomEl.textContent = nom;
-      pbrEl.textContent = pbr.toString();
-      jvmEl.textContent = pd.toString();
-      fnaccEl.textContent = fnacc;
+      pbrEl.textContent = pbr.toString() + " $";
+      jvmEl.textContent = pd.toString() + " $";
+      fnaccEl.textContent = fnacc + " $";
       recupEl.textContent = recup + " $ (À ajouter aux revenus)";  
       informations.innerHTML = "Le particulier a disposé d'un bien amortissable..."
     }
@@ -171,12 +171,12 @@ function ButtonGC()
   
     if (societe.checked) {
 
-      impotEl.textContent = impot.toFixed(2) + " $"
-      cdcEl.textContent = cdc + " $"
-      imrtdEl.textContent = imrtd.toFixed(2) + " $"
+      impotEl.textContent = impot.toFixed(2) + " $";
+      cdcEl.textContent = cdc + " $";
+      imrtdEl.textContent = imrtd.toFixed(2) + " $";
       nomEl.textContent = nom;
-      pbrEl.textContent = pbr.toString();
-      jvmEl.textContent = pd.toString();
+      pbrEl.textContent = pbr.toString() + " $";
+      jvmEl.textContent = pd.toString() + " $";
       fnaccEl.textContent = "N/A";
       recupEl.textContent = "N/A";
       informations.innerHTML = "La société a disposé d'un bien non amortissable..."
@@ -187,8 +187,8 @@ function ButtonGC()
       cdcEl.textContent = "N/A"
       imrtdEl.textContent = "N/A"
       nomEl.textContent = nom;
-      pbrEl.textContent = pbr.toString();
-      jvmEl.textContent = pd.toString();
+      pbrEl.textContent = pbr.toString() + " $";
+      jvmEl.textContent = pd.toString() + " $";
       fnaccEl.textContent = "N/A";
       recupEl.textContent = "N/A";
       informations.innerHTML = "Le particulier a disposé d'un bien non amortissable..."

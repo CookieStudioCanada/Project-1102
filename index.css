@@ -11,6 +11,7 @@ header h1 {
 
 /* Hamburger menu */
 .toggle-button {
+  padding: 0;
   margin: auto 10px;
   background-size: cover;
   background-color: white;
@@ -50,7 +51,7 @@ header h1 {
   padding: 5px 0px;
 }
 
-/* Buttons */
+/* Buttons 
 
 button {
   border: black 1px solid;
@@ -62,6 +63,20 @@ button {
 button a {
   text-decoration: none;
   color: black;
+}
+
+*/
+
+button {
+  width: 150px;
+  padding: 12px 20px;
+  margin: 8px auto;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 /* Tables */
@@ -78,4 +93,89 @@ table, td, th {
 
 th {
     background-color: lightcoral;
+}
+
+/* Select... */
+
+select {
+  appearance: none;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  color: black;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select-selected {
+  background-color: #fff;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+.select-items div, .select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.select-items {
+  position: absolute;
+  background-color: #f9f9f9;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  font-size: 16px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0 8px 0 0;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
 }

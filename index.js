@@ -134,7 +134,7 @@ function ButtonGC()
     let gc = pd - pbr
     let gci = gc / 2
 
-    let recup = (pbr - fnacc);
+    let recup = (pbr - fnacc); // ne fonctionne pas toujours...
   
     let cdc = gci
     let imrtd = gci * 0.30666666
